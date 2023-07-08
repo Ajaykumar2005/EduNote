@@ -1,0 +1,652 @@
+<!DOCTYPE html><!-- Last Published: Tue May 02 2023 15:41:41 GMT+0000 (Coordinated Universal Time) -->
+<html >
+
+<head>
+  <meta charset="utf-8" />
+  <title>EduNotes</title>
+  <meta
+    content="Access free verified study materials from the world&#x27;s best students. Then supercharge your learning with AI powered essay generation, examples, quizzes and much more."
+    name="description" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="{{ url_for('static', filename='style.css') }}"
+    rel="stylesheet" type="text/css" />
+  <style>
+    @media (max-width:991px) and (min-width:768px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="01e8978e-7a6e-45a5-714e-d4d2d13c3c11"] {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width:767px) and (min-width:480px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="01e8978e-7a6e-45a5-714e-d4d2d13c3c11"] {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width:479px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="01e8978e-7a6e-45a5-714e-d4d2d13c3c11"] {
+        opacity: 0;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script
+    type="text/javascript">WebFont.load({ google: { families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Work Sans:200,300,regular,500,600,700,800", "Halant:300,regular,500,600,700"] } });</script>
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+  <script
+    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <link href="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/6448433ccd3664b1ab5c56cc_NexFavS.png"
+    rel="shortcut icon" type="image/x-icon" />
+  <link href="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/644843412b2f77206998fb21_NexFavL.png"
+    rel="apple-touch-icon" />
+</head>
+
+<body class="body">
+  <div class="homepage">
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
+      role="banner" class="navbar-logo-left w-nav">
+      <div class="navbarcontainer w-container">
+        <div class="menu-button w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+        <div class="navbar-content">
+          <div class="navbar-brand">
+            <div class="Edu-logo"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e699f33d8153e937ed3fd_Vectors-Wrapper.svg"
+                loading="lazy" alt="" class="vectors-wrapper" />
+            </div>
+            <div class="title">EduNote</div>
+          </div>
+          <nav role="navigation" class="navbar-menu w-nav-menu"><a href=""
+              class="navbar-link w-nav-link">
+              <div class="link">Search notes</div>
+            </a><a href="{{ url_for('login') }}" class="navbar-link w-nav-link">
+              <div class="link">Login</div>
+            </a><a href="{{ url_for('signup') }}" class="button w-nav-link">
+              <div class="text-2">Sign up</div>
+            </a></nav>
+        </div>
+      </div>
+    </div>
+    <div class="hero-section">
+      <div class="small-container">
+        <div class="title-section">
+          <div class="content">
+            <div class="hero-title-section">
+              <div class="hero-title">Empowering Students through
+                Knowledge Sharing</div>
+              <div class="hero-description">Discover &amp; download study notes &amp; materials from the best
+                students around the world. </div>
+            </div>
+          </div>
+          <div class="search-section"></div>
+        </div>
+        <div class="search-box">
+          <div class="html-embed-2 w-embed">
+            <style>
+              .form-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+                margin: 0;
+                padding: 0;
+              }
+
+
+              .form {
+                display: flex;
+                flex-grow: 1;
+                align-items: center;
+                padding: 0px 16px;
+                justify-content: space-between;
+                background-color: #fff;
+                border-radius: 40px;
+                box-sizing: border-box;
+                width: 100%;
+              }
+
+              .input {
+                flex-grow: 1;
+                height: 80px;
+                background: none;
+                border: none;
+                font-size: 16px;
+                box-sizing: border-box;
+              }
+
+              .Edu-search {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 48px;
+                height: 48px;
+                background-color: #10100e;
+                color: #fff;
+                border: none;
+                border-radius: 40px;
+                font-size: 16px;
+                cursor: pointer;
+              }
+
+              .input,
+              .Edu-search:focus {
+                outline: none;
+              }
+
+              .Edu-search svg {
+                fill: #fff;
+                width: 20px;
+                height: 20px;
+              }
+
+
+              @media only screen and (max-width: 478px) {
+                .form-container {
+                  height: 52px;
+                }
+
+                .input {
+                  height: 52px;
+                  font-size: 14px;
+                }
+
+                .Edu-search {
+                  width: 32px;
+                  height: 32px;
+                }
+
+                .form {
+                  padding: 0px 12px;
+                }
+
+                .Edu-search svg {
+                  fill: #fff;
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+            </style>
+
+            <div class="form-container">
+              <form class="form" action="" method="get" target="_self">
+                <input id="search" type="text" class="input" name="searcheverything"
+                  placeholder="Search notes, schools, & more" autocomplete="off" />
+
+                <button id="clear" class="Edu-search" type="submit">
+                  <svg class="svg-icon search-icon" aria-labelledby="title desc" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+                    <g class="search-path" fill="none" stroke="#fff" stroke-width="2">
+                      <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+
+                      <circle cx="8" cy="8" r="7" />
+
+                    </g>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+        <div class="illustration"><img
+            src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e6ca0fd7e7623015d41b1_Vectors-Wrapper.svg"
+            loading="lazy" alt="" class="feature-image-2" />
+        </div>
+      </div>
+    </div>
+    <div class="basic-details">
+      <div class="section-title-centered">
+        <div class="basic-details-title">
+          <div class="content-group">
+            <div class="section-header">About EduNotes</div>
+            <div class="text-card-list">
+              <div class="text-card">
+                <div class="text-card-text">EduNote is an innovative online
+                  platform that seeks to revolutionize the educational landscape by providing a seamless system
+                  for sharing, accessing, and monetizing educational notes. </div>
+                <div class="side-color"></div>
+              </div>
+              <div class="text-card">
+                <div class="text-card-text">By contributing
+                  their notes to the platform, students play a crucial role in building a vast repository of
+                  educational resources, benefiting not only themselves but also their peers.</div>
+                <div class="side-color"></div>
+              </div>
+              <div class="text-card">
+                <div class="text-card-text">One of the key features of EduNote is its unique credit system, designed to incentivize
+                  students for their valuable contributions. When students upload their notes, they earn
+                  platform credits based on factors such as the quality, popularity, and demand for their content.</div>
+                <div class="side-color"></div>
+              </div>
+              <div class="text-card">
+                <div class="text-card-text">Students can use their earned credits to access premium notes contributed by other
+                  students
+                </div>
+                <div class="side-color"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="study.jpg" style="border-radius: 4px;"
+          loading="lazy" data-w-id="01e8978e-7a6e-45a5-714e-d4d2d13c3c11"
+          sizes="(max-width: 479px) 90vw, (max-width: 767px) 94vw, (max-width: 991px) 76vw, 54vw"
+         alt="" class="image" />
+      </div>
+    </div>
+    <div class="reviews-section">
+      <div class="reviews">
+        <div data-w-id="66303065-99db-3218-5a44-63cab910a838"
+          style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+          class="review">
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">Edu provided me with a simpler way to understand difficult topics in my degree.
+                  Being able to find notes that were already formatted, simplified and concise made studying that much
+                  easier.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7ba5aae7fb5127fffcbf_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Tim • 🇺🇸</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">I first used Edu Notes while doing a very heavy course load one semester. The notes
+                  I downloaded were organised and concise, and saved me time. I would highly recommend Edu and will
+                  use it again.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7ba60f19fc0f8c7001e3_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Grace • 🇬🇧</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">I was skeptical of using Edu Notes at first, but after downloading a few sets of
+                  notes, I was hooked. The platform offers a diverse range of notes on a variety of topics, all of which
+                  are incredibly useful for students at any level.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7ba74a8f6099112dfde9_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Anuraag • 🇦🇺</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">Edu Notes is a game-changer for me. As an international student, I struggled with
+                  some of the technical jargon in my courses. However, with the help of Edu Notes, I was able to
+                  easily understand difficult topics and improve my grades.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7ba60f19fc0f8c7001e3_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Tim • 🇺🇸</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">I found the condensed and easy to understand summary sheets really helpful when
+                  preparing for exams and assessments. They were a reliable source I could always go back to when stuck
+                  or trying to revise a particular concept</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7ba71e6081f5dfb71a6a_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Martin • 🇦🇺</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">Edu Notes is an excellent resource for students who are struggling with a particular
+                  subject. The notes available are well-researched and comprehensive, providing students with all the
+                  information they need to succeed.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7ba94a8f60f9e62dfdea_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Anuraag • 🇦🇺</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">Edu Notes has helped me immensely throughout my university studies. The notes
+                  available are incredibly detailed, and the formatting is clear and easy to follow. I highly recommend
+                  this website to anyone looking to improve their academic performance.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7baaf9b0602d362240e1_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Martin • 🇦🇺</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">Edu Notes is not just a website, it&#x27;s a community. The platform provides
+                  students with the opportunity to connect with other like-minded individuals from around the world, all
+                  of whom are passionate about learning and achieving their academic goals.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7bab31eba11e196c604f_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Martin • 🇦🇺</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">The notes available on Edu Notes are not only informative, but they are also
+                  engaging. I was pleasantly surprised by how much I enjoyed reading them. They were well-written and
+                  easy to follow, making studying for exams far more enjoyable than I ever thought possible.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7bacb325f2cf8f8b43e9_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Anuraag • 🇦🇺</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-block-01">
+            <div class="wrapper">
+              <div class="content-4">
+                <div class="text">Edu Notes provides an invaluable service to students around the world. Not only can
+                  you purchase high-quality notes, but you can also upload your own notes and earn money in the process.
+                  It&#x27;s a win-win situation for everyone involved.</div>
+                <div class="user-block"><img
+                    src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640e7bac39d85871a5c61263_Vectors-Wrapper.svg"
+                    loading="lazy" alt="" class="vectors-wrapper-7" />
+                  <div class="text-14">Martin • 🇦🇺</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="highlights-section">
+      <div class="small-container-2">
+        <div class="columns f2wf-columns">
+          <div class="snapshot">
+            <div class="image-container"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64215fa4e6ce5512111a0f4c_Highlight%2001.png"
+                loading="lazy" alt="" class="highlight-image" />
+            </div>
+            <div class="default-text"><strong class="bold-text-3">Free access</strong><strong class="bold-text-5"> to
+                view notes from the best students globally.</strong><strong></strong></div>
+          </div>
+          <div class="snapshot">
+            <div class="image-container"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64215fa57f2f1983cf8c1e44_Highlight%2002.png"
+                loading="lazy" alt="" class="highlight-image" />
+            </div>
+            <div class="default-text"><strong>Search by your course, institution or topics.</strong></div>
+          </div>
+          
+          <div class="snapshot">
+            <div class="image-container"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64215fa4cdfb3e33412d0e93_Highlight%2004.png"
+                loading="lazy" alt="" class="highlight-image" />
+            </div>
+            <div class="default-text"><strong>Make money from your notes while helping other students learn.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="categories-section">
+      <div class="section-header-2">
+        <div class="content-3">
+          <div class="section-header">See our top topics and institutions</div>
+          <div class="section-description">Thousands of verified materials across thousands of institutions. </div>
+        </div>
+      </div>
+      <div class="small-container-4">
+        <div class="list-element-row f2wf-columns"><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db22b2f7741f69c35e1_uni%20cpa.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">Certified Public Accountant</div>
+                <div class="description">Specialty notes</div>
+              </div>
+            </div>
+          </a><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db2564afc6d2a676aa3_uni%20syd.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">University of Sydney</div>
+              </div>
+            </div>
+          </a><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db2d34d3050924802c7_uni.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">A-levels</div>
+              </div>
+            </div>
+          </a><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db273b4ea1fe565c007_uni%20harv.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">Harvard University</div>
+              </div>
+            </div>
+          </a><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db2d34d3082684802b2_uni-1.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">University of California Berkley</div>
+              </div>
+            </div>
+          </a><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db273b4eaa7d065c008_uni%20ib.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">International Baccalaureate</div>
+              </div>
+            </div>
+          </a><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db234e79682e19c8c2d_uni%20oxf.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">University of Oxford</div>
+              </div>
+            </div>
+          </a><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db2d34d304e1c4802b1_uni%20cam.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">University of Cambridge</div>
+              </div>
+            </div>
+          </a><a
+            href=""
+            class="topic-link-block w-inline-block">
+            <div class="list-element"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/64486db22b2f7746369c35e2_uni%20cfa.png"
+                loading="lazy" alt="" class="vectors-wrapper-9" />
+              <div class="content-5">
+                <div class="title-3">Chartered Financial Analyst</div>
+                <div class="description">Specialty notes</div>
+              </div>
+            </div>
+          </a></div>
+      </div>
+    </div>
+    
+    <div class="subscription-section">
+      <div class="section-title-centered">
+        <div class="section-title">
+          <div class="section-header">Upload Your Notes Here in</div>
+          <div class="section-description">
+          </div>
+        </div>
+      </div>
+      <div class="subscription-block">
+        <div class="monthly-plan">
+          <div class="price-content">
+            
+            <div class="price-container">
+              <div class="price-block">
+                <div class="price">
+                  <div class="text-5"></div>
+                  <div class="text-5">
+
+                    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                    <div class="file-upload">
+                     
+                      <div class="image-upload-wrap">
+                       
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                      <input type="file" name="file" accept=".pdf, .docx, .txt" required>
+                      <button  class="file-upload-btn" type="submit">Upload</button>
+                    </form>
+                    </div>
+                    
+                  
+                  {% if file_path %}
+                  <div class="file-info">
+                    <p>File Path: {{ file_path }}</p>
+                    <!-- Additional file information can be displayed here -->
+                  </div>
+                  {% endif %}
+                  
+                    
+                    
+                    
+                  </div>
+                  
+                  </div></div></div>
+                </div>
+              </div>
+              <div class="type">
+                <div class="price-description">per pdf</div>
+                <div class="subscription-byline cost">2 credit, after verification</div>
+              </div>
+            </div>
+          </div>
+          
+       
+     
+    </div>
+    <div style="color: black;">
+      <h1>Download Notes </h1>
+                    <div id="fileList" class="grid-container">
+                      {% for file in file_list %}
+                        <div class="file-item">
+                          <span>{{ file }}</span>
+                          <a href="/download/{{ file }}" download class="file-upload-btn">Download</a>
+                        </div>
+                      {% endfor %}
+                    </div>
+                      <div class="file-upload-content">
+                        <img class="file-upload-image" src="#" alt="your image" />
+                        <div class="image-title-wrap">
+                          <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                        </div>
+                      </div>
+                    </div>
+    </div>
+    <div class="footer">
+      <div class="columns-2 f2wf-columns">
+        <div class="column">
+          <div class="navbar-brand">
+            <div class="Edu-logo"><img
+                src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/640ea83c11dfc2bc5d910132_Vectors-Wrapper.svg"
+                loading="lazy" alt="" class="vectors-wrapper" />
+            </div>
+            <div class="title">EduNotes</div>
+            
+            
+          </div>
+          
+        </div>
+        <div class="small-columns f2wf-small-columns">
+          <div class="column-2">
+            <div class="content-6">
+              <div class="text-15">More</div>
+              <div class="footer-links">
+                <div class="link-2"><a href="http://About Us" class="text-link">About us</a></div>
+                
+                <div class="link-2"><a href=""
+                    class="text-link">FAQs</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="column-2">
+            <div class="content-6">
+              <div class="text-15">Information</div>
+              <div class="footer-links">
+                <div class="link-2"><a href="
+                  " class="text-link">Privacy</a></div>
+                <div class="link-2"><a href="" class="text-link">Contact us</a></div>
+                <div class="link-2"><a href="" class="text-link">Terms of use</a>
+                </div>
+                <div class="link-2"><a href="" class="text-link">Copyright</a></div>
+                <div class="link-2"><a href="" class="text-link">Terms &amp;
+                    conditions</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="copyrtight">© 2023 Edu Notes Ltd. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=640e63e70c1c77711e52d68b"
+    type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    
+  <script src="https://uploads-ssl.webflow.com/640e63e70c1c77711e52d68b/js/webflow.10b86a4fb.js"
+    type="text/javascript"></script>
+  <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+
+</html>
